@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Stream from './components/stream';
 
 const tracks = [
   {
@@ -14,13 +15,7 @@ const tracks = [
 ];
 
 ReactDOM.render(
-  <div>
-    {
-      tracks.map(track => {
-        return <div key={track.id} className="track"> {track.title} </div>
-      })
-    }
-  </div>,
+  <Stream tracks={tracks}/>,
   document.getElementById('app')
 );
 
